@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adminsystem.UpdateEmployeeController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="687.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="37.0" layoutY="88.0" prefHeight="17.0" prefWidth="95.0" text="*Employee ID:" />
+            <TextField fx:id="txtUpdatedEmployeeID" layoutX="141.0" layoutY="84.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="423.0" layoutY="88.0" prefHeight="17.0" prefWidth="82.0" text="Last Name:" />
+            <TextField fx:id="txtUpdatedLastName" layoutX="519.0" layoutY="84.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <TextField fx:id="txtTerminationDate" layoutX="519.0" layoutY="143.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="380.0" layoutY="147.0" prefHeight="17.0" prefWidth="124.0" text="Termination Date:" />
+            <Label layoutX="57.0" layoutY="202.0" prefHeight="17.0" prefWidth="74.0" text="Cell Phone:" />
+            <TextField fx:id="txtUpdatedCellPhone" layoutX="141.0" layoutY="198.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="342.0" layoutY="202.0" prefHeight="17.0" prefWidth="164.0" text="Alternative Phone number:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtUpdateAltPhone" layoutX="519.0" layoutY="198.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="10.0" layoutY="260.0" prefHeight="17.0" prefWidth="124.0" text="Emergency Contact:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtUpdatedEmergencyContact" layoutX="141.0" layoutY="256.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="341.0" layoutY="260.0" prefHeight="17.0" prefWidth="164.0" text="Emergency Contact Phone:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtUpdatedEmergencyContactPhone" layoutX="519.0" layoutY="256.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="8.0" layoutY="321.0" prefHeight="17.0" prefWidth="124.0" text="Emergency Contact 2:">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <TextField fx:id="txtUpdatedEmergencyContact2" layoutX="141.0" layoutY="317.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="329.0" layoutY="321.0" prefHeight="17.0" prefWidth="190.0" text="Emergency Contact Phone 2:">
+               <font>
+                  <Font size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtUpdatedEmergencyContactPhone2" layoutX="519.0" layoutY="317.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="40.0" layoutY="385.0" prefHeight="17.0" prefWidth="95.0" text="Pay Rate:" />
+            <TextField fx:id="txtUpdatedPayRate" layoutX="141.0" layoutY="381.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Button layoutX="334.0" layoutY="497.0" mnemonicParsing="false" onAction="#updateEmployee" style="-fx-background-color: #3BA1A5;" text="Update Employee" />
+            <Button layoutX="34.0" layoutY="547.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #3BA1A5;" text="Back" />
+            <Label layoutX="58.0" layoutY="147.0" prefHeight="17.0" prefWidth="74.0" text="Position:" />
+            <TextField fx:id="txtUpdatedPosition" layoutX="141.0" layoutY="143.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="409.0" layoutY="387.0" prefHeight="17.0" prefWidth="95.0" text="Password:" />
+            <Label layoutX="324.0" layoutY="31.0" prefHeight="24.0" prefWidth="174.0" text="Update Employee">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserID" layoutX="141.0" layoutY="436.0" style="-fx-border-color: black; -fx-border-width: 2px;" />
+            <Label layoutX="25.0" layoutY="442.0" prefHeight="17.0" prefWidth="55.0" text="*UserID:" />
+            <PasswordField fx:id="txtUpdatePassword" layoutX="524.0" layoutY="381.0" prefHeight="29.0" prefWidth="164.0" style="-fx-border-width: 2px; -fx-border-color: black;" />
+            <Label layoutX="442.0" layoutY="465.0" text="If you are not updating item put original field" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

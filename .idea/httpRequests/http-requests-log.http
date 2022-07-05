@@ -1,0 +1,13 @@
+GET https://cis294.hfcc.edu/api/user/login
+Content-Type: application/json
+
+{
+  "username" : "admin",
+  "password" : "P@ssword02"
+
+}
+
+<> 2022-02-23T150814.200.json
+
+###
+

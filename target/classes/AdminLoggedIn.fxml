@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="702.0" prefWidth="1576.0" style="-fx-background-color:  #e3fcfc" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adminsystem.SceneController">
+   <children>
+      <Label layoutX="22.0" layoutY="5.0" text="Deve's Pasty Shop">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="4.0" layoutY="57.0" prefHeight="636.0" prefWidth="1558.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab style="-fx-font-size: 18; -fx-pref-height: 30; -fx-font-weight: bold; -fx-background-color: #3ba1a5;" text="Orders">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="898.0" prefWidth="1580.0" style="-fx-background-color: #e3fcfc;">
+                     <children>
+                        <Label layoutX="25.0" layoutY="17.0" text="Orders Statistics">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tbl_Orders" layoutX="7.0" layoutY="72.0" prefHeight="399.0" prefWidth="564.0">
+                           <columns>
+                              <TableColumn fx:id="clm_OrderId" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="clm_Subtotal" prefWidth="88.0" text="Subtotal" />
+                              <TableColumn fx:id="clm_Total" prefWidth="88.0" text="Total" />
+                              <TableColumn fx:id="clm_Discount" prefWidth="88.0" text="Discount" />
+                              <TableColumn fx:id="clm_OrderDate" prefWidth="223.0" text="Order Date" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-size: 18; -fx-pref-height: 30; -fx-font-weight: bold; -fx-background-color: #3ba1a5;" text="Inventory">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="905.0" style="-fx-background-color: #e3fcfc;">
+                     <children>
+                        <Label layoutX="25.0" layoutY="17.0" text="Inventory Statistics">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tbl_Products" layoutX="25.0" layoutY="51.0" prefHeight="415.0" prefWidth="1418.0">
+                          <columns>
+                            <TableColumn fx:id="clm_productId" prefWidth="54.5" text="ID" />
+                            <TableColumn fx:id="clm_Item" prefWidth="133.5" text="Item" />
+                              <TableColumn fx:id="clm_Price" prefWidth="67.5" text="Price" />
+                              <TableColumn fx:id="clm_OnHand" prefWidth="82.5" text="Onhand" />
+                              <TableColumn fx:id="clm_Description" prefWidth="1195.0" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="39.0" layoutY="496.0" mnemonicParsing="false" onAction="#addItem" prefHeight="74.0" prefWidth="192.0" style="-fx-background-color: #3ba1a5;" text="Add Items" />
+                        <Button layoutX="318.0" layoutY="498.0" mnemonicParsing="false" onAction="#updateItem" prefHeight="75.0" prefWidth="174.0" style="-fx-background-color: #3ba1a5;" text="Update Item" />
+                        <Button layoutX="559.0" layoutY="499.0" mnemonicParsing="false" onAction="#removeItems" prefHeight="77.0" prefWidth="194.0" style="-fx-background-color: #3ba1a5;" text="Remove Items" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-size: 18; -fx-pref-height: 30; -fx-font-weight: bold; -fx-background-color: #3ba1a5;" text="Employees">
+               <content>
+                  <AnchorPane prefHeight="478.0" prefWidth="1632.0" style="-fx-background-color: #e3fcfc;">
+                     <children>
+                        <Label layoutX="25.0" layoutY="17.0" prefHeight="43.0" prefWidth="160.0" text="Employees:">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tbl_Employees" layoutX="4.0" layoutY="60.0" prefHeight="418.0" prefWidth="1558.0">
+                          <columns>
+                            <TableColumn fx:id="clm_EmployeeId" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="clm_FName" prefWidth="94.0" text="First Name" />
+                              <TableColumn fx:id="clm_LName" prefWidth="96.0" text="Last Name" />
+                              <TableColumn fx:id="clm_Position" prefWidth="96.0" text="Position" />
+                              <TableColumn fx:id="clm_DOH" prefWidth="115.0" text="Date of Hire" />
+                              <TableColumn fx:id="clm_Email" prefWidth="112.5" text="Email" />
+                              <TableColumn fx:id="clm_Phone" prefWidth="115.0" text="Phone Number" />
+                              <TableColumn fx:id="clm_AltPhone" prefWidth="139.5" text="Alt Phone Number" />
+                              <TableColumn fx:id="clm_EmergencyContact" prefWidth="147.0" text="Emergency Contact" />
+                              <TableColumn fx:id="clm_EmergencyContactPhone" prefWidth="157.5" text="Emergency Contact Phone Number" />
+                              <TableColumn fx:id="clm_EmergencyContact2" prefWidth="164.0" text="Emergency Contact 2" />
+                              <TableColumn fx:id="clm_EmergencyContactPhone2" prefWidth="171.0" text="Emergency Contact Phone # 2" />
+                              <TableColumn fx:id="clm_PayRate" prefWidth="74.5" text="Pay Rate" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_Add_Employee" layoutX="55.0" layoutY="520.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="70.0" prefWidth="253.0" style="-fx-background-color: #3ba1a5;" text="Add Employee" />
+                        <Button layoutX="388.0" layoutY="518.0" mnemonicParsing="false" onAction="#updateEmployeeTab" prefHeight="75.0" prefWidth="244.0" style="-fx-background-color: #3ba1a5;" text="Update Employee" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-size: 18; -fx-pref-height: 30; -fx-font-weight: bold; -fx-background-color: #3ba1a5;" text="Employee Timecard">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="1023.0" style="-fx-background-color: #e3fcfc;">
+                     <children>
+                        <Label layoutX="25.0" layoutY="17.0" prefHeight="43.0" prefWidth="210.0" text="Punch in Logs:">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_AddEmployee1" layoutX="723.0" layoutY="541.0" mnemonicParsing="false" onAction="#search" prefHeight="33.0" prefWidth="113.0" style="-fx-background-color: #3ba1a5;" text="Search">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txtSearch" layoutX="751.0" layoutY="485.0" prefHeight="24.0" prefWidth="95.0" />
+                        <Label layoutX="648.0" layoutY="489.0" text="Employee ID:" />
+                        <TableView fx:id="tbl_TimeCard" layoutX="25.0" layoutY="57.0" prefHeight="399.0" prefWidth="1452.0">
+                           <columns>
+                              <TableColumn fx:id="clm_TimeCardId" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="clm_TimeCardfName" prefWidth="88.0" text="First Name" />
+                              <TableColumn fx:id="clm_TimeCardlName" prefWidth="88.0" text="Last Name" />
+                              <TableColumn fx:id="clm_TimeCardPosition" prefWidth="88.0" text="Position" />
+                              <TableColumn fx:id="clm_TimeCardClockIn" prefWidth="195.5" text="Clock In" />
+                              <TableColumn fx:id="clm_TimeCardClockOut" prefWidth="247.5" text="Clock Out" />
+                              <TableColumn fx:id="clm_TimeCardStartMeal" prefWidth="223.0" text="Start Meal" />
+                              <TableColumn fx:id="clm_TimeCardEndMeal" prefWidth="217.0" text="End Meal" />
+                              <TableColumn fx:id="clm_TimeCardDate" prefWidth="229.0" text="Date" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="btn_Logout" layoutX="1187.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnLogoutOnClick" prefHeight="35.0" prefWidth="113.0" style="-fx-background-color: #3ba1a5;" text="LOGOUT">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

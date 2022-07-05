@@ -1,0 +1,10 @@
+{
+  "message": "login successful",
+  "user": "admin",
+  "id": 1,
+  "roles": [
+    "ROLE_USER",
+    "ROLE_ADMIN"
+  ],
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlhdCI6MTY0NTY0Njg5NSwiZXhwIjoxNjQ1NjUwNDk1fQ.9u_hdIp_pKdhkeWKtQ8ou0be80PSr2JSDLnRpXoUGJg"
+}

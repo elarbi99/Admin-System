@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #e3fcfc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adminsystem.EmployeeLoggedInController">
+   <children>
+      <Label layoutX="193.0" layoutY="37.0" text="Deve's Pasty Shop" underline="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="82.0" text="EMPLOYEE CLOCK-IN">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="111.0" text="Welcome &lt;employee name&gt;!">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClockIn" layoutX="142.0" layoutY="198.0" mnemonicParsing="false" onAction="#clockIn" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #3BA1A5;" text="CLOCK IN">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClockOut" layoutX="309.0" layoutY="198.0" mnemonicParsing="false" onAction="#clockOut" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #3BA1A5;" text="CLOCK OUT">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnStartMeal" layoutX="142.0" layoutY="266.0" mnemonicParsing="false" onAction="#startMeal" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #3BA1A5;" text="START MEAL">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEndMeal" layoutX="309.0" layoutY="266.0" mnemonicParsing="false" onAction="#endMeal" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #3BA1A5;" text="END MEAL">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLogout" layoutX="477.0" layoutY="17.0" mnemonicParsing="false" onAction="#logout" prefHeight="43.0" prefWidth="109.0" style="-fx-background-color: #3BA1A5;" text="LOG OUT">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="11.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblTimeCardError" layoutX="133.0" layoutY="147.0" prefHeight="18.0" prefWidth="426.0" textFill="#ff0808" />
+   </children>
+</AnchorPane>
